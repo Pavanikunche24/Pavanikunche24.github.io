@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kunche Reddy Pavani | Generative AI Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#3b82f6;
+border-radius:20px;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+/* Hero */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 10%;
+}
+
+.hero-left{
+width:55%;
+}
+
+.hero-left h3{
+color:#60a5fa;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.hero-left h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-left h1 span{
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-left p{
+font-size:18px;
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.btn{
+padding:14px 28px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+margin-right:15px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#3b82f6;
+color:white;
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary{
+background:transparent;
+border:1px solid #3b82f6;
+color:white;
+}
+
+.secondary:hover{
+background:#3b82f6;
+}
+
+.hero-right{
+width:35%;
+display:flex;
+justify-content:center;
+}
+
+.profile{
+width:300px;
+height:300px;
+border-radius:50%;
+background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+padding:6px;
+animation:float 4s ease-in-out infinite;
+}
+
+.profile img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+background:#1e293b;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* Cards */
+
+.stats{
+padding:40px 10%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(59,130,246,.2);
+}
+
+.card h2{
+font-size:42px;
+color:#60a5fa;
+}
+
+.card p{
+margin-top:10px;
+color:#cbd5e1;
+}
+
+/* Section */
+
+section{
+padding:80px 10%;
+}
+
+.title{
+font-size:42px;
+margin-bottom:50px;
+text-align:center;
+}
+
+.title span{
+color:#60a5fa;
+}
+
+/* Skills */
+
+.skills-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill-name{
+margin-bottom:8px;
+}
+
+.bar{
+height:12px;
+background:#334155;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+border-radius:20px;
+}
+
+/* Timeline */
+
+.timeline{
+border-left:3px solid #3b82f6;
+padding-left:30px;
+}
+
+.job{
+margin-bottom:45px;
+position:relative;
+}
+
+.job::before{
+content:'';
+position:absolute;
+left:-40px;
+top:5px;
+width:18px;
+height:18px;
+background:#3b82f6;
+border-radius:50%;
+}
+
+.job h2{
+color:#60a5fa;
+margin-bottom:8px;
+}
+
+.job h4{
+color:#cbd5e1;
+margin-bottom:10px;
+}
+
+/* Projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.project{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+.project h2{
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.tags{
+margin-top:20px;
+}
+
+.tags span{
+display:inline-block;
+padding:8px 14px;
+background:#334155;
+border-radius:20px;
+margin:5px;
+font-size:13px;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:18px;
+margin:15px 0;
+color:#cbd5e1;
+}
+
+/* Footer */
+
+footer{
+padding:25px;
+text-align:center;
+background:#020617;
+color:#94a3b8;
+margin-top:50px;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-left,.hero-right{
+width:100%;
+}
+
+.hero-left h1{
+font-size:42px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.skills-grid,
+.projects{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">PAVANI AI</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero" id="about">
+
+<div class="hero-left">
+
+<h3>👋 Hello, I'm</h3>
+
+<h1>
+<span>Kunche Reddy Pavani</span>
+</h1>
+
+<p>
+Generative AI Engineer with 9+ years of experience designing enterprise AI solutions using Large Language Models, Retrieval-Augmented Generation (RAG), Machine Learning, NLP, Vector Databases, Cloud Platforms, and MLOps technologies.
+</p>
+
+<a href="resume.pdf" class="btn primary" target="_blank">
+Download Resume
+</a>
+
+<a href="https://github.com/pavabikunche24" class="btn secondary">
+GitHub
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="profile">
+<img src="profile.jpg" alt="Profile Photo">
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h2>9+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="card">
+<h2>5</h2>
+<p>Enterprise Clients</p>
+</div>
+
+<div class="card">
+<h2>25+</h2>
+<p>AI Solutions</p>
+</div>
+
+<div class="card">
+<h2>15+</h2>
+<p>Core Technologies</p>
+</div>
+
+</div>
+
+<section id="skills">
+
+<h1 class="title">
+Technical <span>Skills</span>
+</h1>
+
+<div class="skills-grid">
+
+<div>
+
+<div class="skill">
+<div class="skill-name">Generative AI & LLMs</div>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">LangChain / LlamaIndex</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">RAG & Vector Databases</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+</div>
+
+<div>
+
+<div class="skill">
+<div class="skill-name">Machine Learning</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">AWS / Azure / GCP</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Docker & Kubernetes</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">MLOps & CI/CD</div>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h1 class="title">
+Career <span>Journey</span>
+</h1>
+
+<div class="timeline">
+
+<div class="job">
+<h2>Gen AI Engineer</h2>
+<h4>AmerisourceBergen | Mar 2025 - Present</h4>
+<p>Enterprise AI applications, RAG architecture, AI Copilots, Knowledge Assistants, LangChain, OpenAI, Pinecone and Kubernetes deployments.</p>
+</div>
+
+<div class="job">
+<h2>AI / ML - Gen AI Engineer</h2>
+<h4>Ford | Apr 2023 - Feb 2025</h4>
+<p>Built enterprise AI solutions, semantic search systems, intelligent chatbots and scalable ML pipelines.</p>
+</div>
+
+<div class="job">
+<h2>AI / ML Engineer</h2>
+<h4>Broadridge Financial | Jan 2021 - Mar 2023</h4>
+<p>Developed predictive analytics, NLP applications and deep learning models for enterprise automation.</p>
+</div>
+
+<div class="job">
+<h2>ML Engineer - Data Science</h2>
+<h4>American Airlines | Oct 2018 - Dec 2020</h4>
+<p>Machine learning pipelines, forecasting systems, customer analytics and BI dashboards.</p>
+</div>
+
+<div class="job">
+<h2>Data Science Engineer</h2>
+<h4>Info Logitech Systems | Aug 2016 - Jun 2018</h4>
+<p>Built predictive models, ETL pipelines and analytical dashboards using Python and SQL.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h1 class="title">
+Featured <span>Projects</span>
+</h1>
+
+<div class="projects">
+
+<div class="project">
+<h2>🧠 Enterprise RAG Platform</h2>
+<p>Built intelligent enterprise knowledge assistant using OpenAI, LangChain, Pinecone and FastAPI.</p>
+
+<div class="tags">
+<span>OpenAI</span>
+<span>LangChain</span>
+<span>RAG</span>
+<span>Pinecone</span>
+</div>
+
+</div>
+
+<div class="project">
+<h2>🤖 AI Copilot</h2>
+<p>Developed AI Copilot for enterprise workflow automation with semantic search and vector retrieval.</p>
+
+<div class="tags">
+<span>Azure OpenAI</span>
+<span>LlamaIndex</span>
+<span>Docker</span>
+<span>Kubernetes</span>
+</div>
+
+</div>
+
+<div class="project">
+<h2>📄 Intelligent Document Processing</h2>
+<p>OCR, NLP and transformer-based extraction engine for enterprise document automation.</p>
+
+<div class="tags">
+<span>OCR</span>
+<span>NLP</span>
+<span>Transformers</span>
+<span>Python</span>
+</div>
+
+</div>
+
+<div class="project">
+<h2>📊 Predictive Analytics Dashboard</h2>
+<p>Business intelligence and forecasting platform using ML models and interactive dashboards.</p>
+
+<div class="tags">
+<span>TensorFlow</span>
+<span>Power BI</span>
+<span>Scikit-Learn</span>
+<span>AWS</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h1 class="title">
+Let's <span>Connect</span>
+</h1>
+
+<div class="contact">
+
+<p>📧 pavani.kunche20@gmail.com</p>
+
+<p>📱 +1 (561) 509-1224</p>
+
+<p>💻 GitHub : github.com/pavabikunche24</p>
+
+<p>
+Always interested in discussing Generative AI,
+Enterprise Automation, LLM Applications,
+Cloud Native AI and Digital Transformation.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Kunche Reddy Pavani | Generative AI Engineer
+
+</footer>
+
+</body>
+</html>
