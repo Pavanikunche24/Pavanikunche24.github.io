@@ -7,7 +7,7 @@
 
 <title>Kunche Reddy Pavani | Generative AI Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,7 +15,8 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -29,20 +30,20 @@ content:'';
 position:fixed;
 width:700px;
 height:700px;
-background:radial-gradient(#3b82f6,transparent 70%);
+background:radial-gradient(circle,#3b82f6,transparent 70%);
 top:-300px;
 right:-250px;
-opacity:.18;
+opacity:.15;
 z-index:-1;
 }
 
 body::after{
 content:'';
 position:fixed;
-width:600px;
-height:600px;
-background:radial-gradient(#8b5cf6,transparent 70%);
-bottom:-250px;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#8b5cf6,transparent 70%);
+bottom:-300px;
 left:-250px;
 opacity:.15;
 z-index:-1;
@@ -51,8 +52,7 @@ z-index:-1;
 nav{
 position:fixed;
 width:100%;
-top:0;
-padding:20px 8%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -65,7 +65,6 @@ z-index:999;
 .logo{
 font-size:28px;
 font-weight:800;
-letter-spacing:2px;
 background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -74,7 +73,7 @@ background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 nav ul{
 display:flex;
 list-style:none;
-gap:35px;
+gap:30px;
 }
 
 nav a{
@@ -92,21 +91,20 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:100px 10%;
 text-align:center;
+padding:120px 10%;
 }
 
 .hero h3{
-color:#60a5fa;
-font-size:20px;
-margin-bottom:15px;
 letter-spacing:4px;
+color:#60a5fa;
+margin-bottom:20px;
 }
 
 .hero h1{
 font-size:72px;
-font-weight:800;
 line-height:1;
+font-weight:800;
 margin-bottom:20px;
 }
 
@@ -124,7 +122,7 @@ margin-bottom:30px;
 }
 
 .hero p{
-max-width:850px;
+max-width:900px;
 margin:auto;
 font-size:20px;
 line-height:1.8;
@@ -136,8 +134,8 @@ padding:90px 10%;
 }
 
 .title{
-text-align:center;
 font-size:42px;
+text-align:center;
 margin-bottom:60px;
 }
 
@@ -153,9 +151,9 @@ gap:25px;
 
 .card{
 background:rgba(15,23,42,.7);
-backdrop-filter:blur(20px);
 padding:35px;
 border-radius:20px;
+backdrop-filter:blur(15px);
 border:1px solid rgba(255,255,255,.05);
 transition:.3s;
 }
@@ -166,7 +164,7 @@ box-shadow:0 20px 40px rgba(59,130,246,.15);
 }
 
 .card h1{
-font-size:50px;
+font-size:48px;
 color:#60a5fa;
 margin-bottom:10px;
 }
@@ -184,39 +182,38 @@ gap:15px;
 
 .badge{
 padding:12px 20px;
-border-radius:30px;
 background:#111c35;
-border:1px solid rgba(96,165,250,.2);
-color:#cbd5e1;
+border-radius:30px;
+border:1px solid rgba(96,165,250,.15);
 transition:.3s;
 }
 
 .badge:hover{
 background:#3b82f6;
-transform:scale(1.05);
+transform:translateY(-3px);
 }
 
 .timeline{
-max-width:1000px;
-margin:auto;
 border-left:3px solid #3b82f6;
 padding-left:35px;
+max-width:1000px;
+margin:auto;
 }
 
 .item{
-margin-bottom:50px;
+margin-bottom:45px;
 position:relative;
 }
 
-.item:before{
+.item::before{
 content:'';
 position:absolute;
 left:-46px;
-top:5px;
+top:6px;
 width:18px;
 height:18px;
-border-radius:50%;
 background:#3b82f6;
+border-radius:50%;
 }
 
 .item h2{
@@ -226,12 +223,12 @@ margin-bottom:5px;
 
 .item h4{
 color:#94a3b8;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
@@ -243,25 +240,25 @@ transition:.3s;
 }
 
 .project:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 }
 
 .project h2{
-margin-bottom:15px;
 color:#60a5fa;
+margin-bottom:15px;
 }
 
 .project p{
-line-height:1.8;
 color:#cbd5e1;
+line-height:1.8;
 }
 
 .terminal{
 background:#000;
-border-radius:15px;
 padding:30px;
-font-family:monospace;
-font-size:18px;
+border-radius:15px;
+font-family:Consolas,monospace;
+font-size:17px;
 line-height:2;
 color:#4ade80;
 max-width:900px;
@@ -269,31 +266,22 @@ margin:auto;
 border:1px solid #1f2937;
 }
 
-.contact{
+.contact-text{
+max-width:800px;
+margin:auto;
 text-align:center;
-}
-
-.contact a{
-display:inline-block;
-margin:15px;
-padding:14px 30px;
-border-radius:10px;
-text-decoration:none;
-background:#3b82f6;
-color:white;
-transition:.3s;
-}
-
-.contact a:hover{
-transform:translateY(-4px);
+font-size:18px;
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:40px;
 }
 
 footer{
-margin-top:80px;
-padding:35px;
+padding:40px;
 text-align:center;
 background:#01040f;
 color:#94a3b8;
+margin-top:50px;
 }
 
 @media(max-width:768px){
@@ -338,7 +326,7 @@ AI.PORTFOLIO
 
 <div>
 
-<h3>GENERATIVE AI ENGINEER</h3>
+<h3>GENERATIVE AI • LLMs • INTELLIGENT AUTOMATION</h3>
 
 <h1>
 KUNCHE REDDY
@@ -347,14 +335,16 @@ KUNCHE REDDY
 </h1>
 
 <h2>
-Building Enterprise AI Systems with LLMs, RAG & Intelligent Automation
+Designing Intelligent Enterprise Systems for the Future
 </h2>
 
 <p>
 
-Generative AI Engineer with 9+ years of experience delivering enterprise-grade AI solutions powered by Large Language Models, Retrieval-Augmented Generation (RAG), Machine Learning, NLP, Vector Databases, and Cloud Native Architectures.
+I build AI systems that transform enterprise knowledge into actionable intelligence.
 
-Specialized in AI Copilots, Enterprise Knowledge Assistants, Semantic Search Platforms, Intelligent Document Processing, and AI-driven Automation.
+With over 9 years of experience across Data Science, Machine Learning, and Generative AI, I specialize in creating enterprise-grade solutions powered by Large Language Models, Retrieval-Augmented Generation (RAG), Semantic Search, Vector Databases, and Cloud Native architectures.
+
+My passion is engineering intelligent platforms that automate complex business processes, accelerate decision making, and unlock the full potential of Artificial Intelligence.
 
 </p>
 
@@ -420,7 +410,7 @@ Technology <span>Stack</span>
 <div class="badge">Kubernetes</div>
 <div class="badge">AWS</div>
 <div class="badge">Azure</div>
-<div class="badge">GCP</div>
+<div class="badge">Google Cloud</div>
 <div class="badge">MLOps</div>
 <div class="badge">FastAPI</div>
 <div class="badge">NLP</div>
@@ -429,10 +419,50 @@ Technology <span>Stack</span>
 
 </section>
 
+<section class="section">
+
+<h1 class="title">
+What I <span>Build</span>
+</h1>
+
+<div class="projects">
+
+<div class="project">
+<h2>🧠 Enterprise AI Platforms</h2>
+<p>
+Building scalable Generative AI ecosystems using LLMs, Vector Databases and enterprise knowledge repositories.
+</p>
+</div>
+
+<div class="project">
+<h2>🤖 AI Copilots</h2>
+<p>
+Developing intelligent assistants capable of contextual reasoning, semantic search and workflow automation.
+</p>
+</div>
+
+<div class="project">
+<h2>📄 Intelligent Document Processing</h2>
+<p>
+Transforming enterprise documents into searchable AI-ready knowledge using OCR and NLP.
+</p>
+</div>
+
+<div class="project">
+<h2>🚀 Intelligent Automation</h2>
+<p>
+Connecting AI with enterprise APIs and cloud platforms to automate business operations.
+</p>
+</div>
+
+</div>
+
+</section>
+
 <section class="section" id="experience">
 
 <h1 class="title">
-Career <span>Timeline</span>
+Career <span>Journey</span>
 </h1>
 
 <div class="timeline">
@@ -440,63 +470,31 @@ Career <span>Timeline</span>
 <div class="item">
 <h2>Gen AI Engineer</h2>
 <h4>AmerisourceBergen | Mar 2025 - Present</h4>
-<p>Enterprise AI applications, AI Copilots, RAG systems, vector search platforms and intelligent automation solutions.</p>
+<p>Enterprise AI applications, AI Copilots, RAG systems and knowledge assistants.</p>
 </div>
 
 <div class="item">
 <h2>AI / ML - Gen AI Engineer</h2>
 <h4>Ford | Apr 2023 - Feb 2025</h4>
-<p>Built scalable AI systems, semantic search engines and enterprise machine learning platforms.</p>
+<p>Built scalable AI solutions, semantic search platforms and enterprise ML pipelines.</p>
 </div>
 
 <div class="item">
 <h2>AI / ML Engineer</h2>
 <h4>Broadridge Financial | Jan 2021 - Mar 2023</h4>
-<p>Developed NLP solutions, predictive analytics and enterprise AI pipelines.</p>
+<p>Developed predictive analytics, NLP applications and deep learning systems.</p>
 </div>
 
 <div class="item">
 <h2>ML Engineer - Data Science</h2>
 <h4>American Airlines | Oct 2018 - Dec 2020</h4>
-<p>Built recommendation engines, forecasting systems and business intelligence solutions.</p>
+<p>Recommendation systems, forecasting models and business intelligence solutions.</p>
 </div>
 
 <div class="item">
 <h2>Data Science Engineer</h2>
 <h4>Info Logitech Systems | Aug 2016 - Jun 2018</h4>
-<p>Designed machine learning models, ETL pipelines and interactive analytics dashboards.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="projects">
-
-<h1 class="title">
-Featured <span>AI Solutions</span>
-</h1>
-
-<div class="projects">
-
-<div class="project">
-<h2>🧠 Enterprise Knowledge Assistant</h2>
-<p>Built enterprise RAG applications using OpenAI, LangChain, Vector Databases and FastAPI for intelligent knowledge retrieval.</p>
-</div>
-
-<div class="project">
-<h2>🤖 AI Copilot Platform</h2>
-<p>Designed AI copilots for enterprise workflow automation with contextual reasoning and semantic search.</p>
-</div>
-
-<div class="project">
-<h2>📄 Intelligent Document Processing</h2>
-<p>Developed OCR and NLP powered document intelligence systems for enterprise automation.</p>
-</div>
-
-<div class="project">
-<h2>📊 Predictive Analytics Dashboard</h2>
-<p>Delivered machine learning and deep learning solutions for forecasting, business intelligence and analytics.</p>
+<p>Machine learning models, ETL pipelines and enterprise dashboards.</p>
 </div>
 
 </div>
@@ -511,53 +509,126 @@ AI <span>Console</span>
 
 <div class="terminal">
 
-C:\Users\Pavani> whoami<br>
+C:\AI\portfolio> initialize
 
-Kunche Reddy Pavani<br><br>
+<br><br>
 
-Role : Generative AI Engineer<br>
+Loading Enterprise AI Profile...
 
-Experience : 9+ Years<br>
+<br><br>
 
-Core Skills :<br>
+Name : Kunche Reddy Pavani
 
-✓ Large Language Models<br>
-✓ Retrieval-Augmented Generation<br>
-✓ AI Automation<br>
-✓ Machine Learning<br>
-✓ Cloud Native AI<br>
-✓ Vector Databases<br>
-✓ MLOps<br><br>
+<br>
 
-Status : Ready for next innovation...
+Role : Generative AI Engineer
+
+<br>
+
+Experience : 9+ Years
+
+<br><br>
+
+Specialization :
+
+<br>
+
+✓ Large Language Models
+
+<br>
+
+✓ Retrieval-Augmented Generation
+
+<br>
+
+✓ Semantic Search
+
+<br>
+
+✓ AI Copilots
+
+<br>
+
+✓ Prompt Engineering
+
+<br>
+
+✓ Machine Learning
+
+<br>
+
+✓ Intelligent Automation
+
+<br>
+
+✓ Cloud Native AI
+
+<br><br>
+
+Mission :
+
+Building AI solutions that bridge human knowledge and intelligent automation.
+
+<br><br>
+
+Status : ONLINE
 
 </div>
 
 </section>
 
-<section class="section contact" id="contact">
+<section class="section" id="contact">
 
 <h1 class="title">
 Let's <span>Connect</span>
 </h1>
 
-<a href="https://github.com/Pavanikunche24">
-GitHub
-</a>
+<div class="contact-text">
 
-<a href="#">
-LinkedIn
-</a>
+I enjoy collaborating on enterprise AI initiatives, Generative AI platforms, intelligent automation, and next-generation technology solutions.
+
+Whether you're building the next AI product or modernizing enterprise workflows, I'm always interested in meaningful conversations and innovative opportunities.
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h3>Email</h3>
+<br>
+<p>pavani.kunche20@gmail.com</p>
+</div>
+
+<div class="card">
+<h3>Phone</h3>
+<br>
+<p>+1 (561) 509-1224</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<br>
+<p>
+B.Tech (Computer Science & Engineering)
+<br><br>
+JNTU Anantapur
+<br><br>
+2014
+</p>
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-Building Intelligent Systems for Enterprise Innovation
+"Artificial Intelligence is not about replacing people.
+It is about amplifying human potential."
 
 <br><br>
 
-Generative AI • LLMs • Machine Learning • Cloud AI • Intelligent Automation
+Generative AI • Machine Learning • Intelligent Automation
 
 <br><br>
 
