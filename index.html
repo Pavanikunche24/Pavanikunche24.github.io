@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kunche Reddy Pavani | Generative AI Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,46 +15,57 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
+background:#020617;
+color:#fff;
 overflow-x:hidden;
 }
 
-/* Scrollbar */
-
-::-webkit-scrollbar{
-width:8px;
+body::before{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(#3b82f6,transparent 70%);
+top:-300px;
+right:-250px;
+opacity:.18;
+z-index:-1;
 }
 
-::-webkit-scrollbar-thumb{
-background:#3b82f6;
-border-radius:20px;
+body::after{
+content:'';
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(#8b5cf6,transparent 70%);
+bottom:-250px;
+left:-250px;
+opacity:.15;
+z-index:-1;
 }
-
-/* Navbar */
 
 nav{
 position:fixed;
-top:0;
 width:100%;
-background:rgba(15,23,42,.95);
-backdrop-filter:blur(10px);
+top:0;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+background:rgba(2,6,23,.85);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
-border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
 font-size:28px;
-font-weight:700;
+font-weight:800;
+letter-spacing:2px;
 background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -60,12 +73,12 @@ background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 
 nav ul{
 display:flex;
-gap:30px;
 list-style:none;
+gap:35px;
 }
 
 nav a{
-color:white;
+color:#cbd5e1;
 text-decoration:none;
 transition:.3s;
 }
@@ -74,233 +87,163 @@ nav a:hover{
 color:#60a5fa;
 }
 
-/* Hero */
-
 .hero{
 min-height:100vh;
 display:flex;
+justify-content:center;
 align-items:center;
-justify-content:space-between;
 padding:100px 10%;
+text-align:center;
 }
 
-.hero-left{
-width:55%;
-}
-
-.hero-left h3{
+.hero h3{
 color:#60a5fa;
 font-size:20px;
-margin-bottom:10px;
+margin-bottom:15px;
+letter-spacing:4px;
 }
 
-.hero-left h1{
-font-size:58px;
-line-height:1.1;
+.hero h1{
+font-size:72px;
+font-weight:800;
+line-height:1;
 margin-bottom:20px;
 }
 
-.hero-left h1 span{
+.hero span{
 background:linear-gradient(90deg,#3b82f6,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.hero-left p{
-font-size:18px;
-color:#cbd5e1;
+.hero h2{
+font-size:30px;
+font-weight:400;
+color:#94a3b8;
+margin-bottom:30px;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:20px;
 line-height:1.8;
-margin-bottom:35px;
-}
-
-.btn{
-padding:14px 28px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
-margin-right:15px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-.primary{
-background:#3b82f6;
-color:white;
-}
-
-.primary:hover{
-transform:translateY(-3px);
-}
-
-.secondary{
-background:transparent;
-border:1px solid #3b82f6;
-color:white;
-}
-
-.secondary:hover{
-background:#3b82f6;
-}
-
-.hero-right{
-width:35%;
-display:flex;
-justify-content:center;
-}
-
-.profile{
-width:300px;
-height:300px;
-border-radius:50%;
-background:linear-gradient(135deg,#3b82f6,#8b5cf6);
-padding:6px;
-animation:float 4s ease-in-out infinite;
-}
-
-.profile img{
-width:100%;
-height:100%;
-border-radius:50%;
-object-fit:cover;
-background:#1e293b;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
-}
-
-/* Cards */
-
-.stats{
-padding:40px 10%;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.card{
-background:#1e293b;
-padding:35px;
-border-radius:18px;
-text-align:center;
-transition:.3s;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(59,130,246,.2);
-}
-
-.card h2{
-font-size:42px;
-color:#60a5fa;
-}
-
-.card p{
-margin-top:10px;
 color:#cbd5e1;
 }
 
-/* Section */
-
-section{
-padding:80px 10%;
+.section{
+padding:90px 10%;
 }
 
 .title{
-font-size:42px;
-margin-bottom:50px;
 text-align:center;
+font-size:42px;
+margin-bottom:60px;
 }
 
 .title span{
 color:#60a5fa;
 }
 
-/* Skills */
-
-.skills-grid{
+.stats{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
-.skill{
-margin-bottom:25px;
-}
-
-.skill-name{
-margin-bottom:8px;
-}
-
-.bar{
-height:12px;
-background:#334155;
+.card{
+background:rgba(15,23,42,.7);
+backdrop-filter:blur(20px);
+padding:35px;
 border-radius:20px;
-overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
 }
 
-.fill{
-height:100%;
-background:linear-gradient(90deg,#3b82f6,#8b5cf6);
-border-radius:20px;
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(59,130,246,.15);
 }
 
-/* Timeline */
-
-.timeline{
-border-left:3px solid #3b82f6;
-padding-left:30px;
-}
-
-.job{
-margin-bottom:45px;
-position:relative;
-}
-
-.job::before{
-content:'';
-position:absolute;
-left:-40px;
-top:5px;
-width:18px;
-height:18px;
-background:#3b82f6;
-border-radius:50%;
-}
-
-.job h2{
+.card h1{
+font-size:50px;
 color:#60a5fa;
-margin-bottom:8px;
-}
-
-.job h4{
-color:#cbd5e1;
 margin-bottom:10px;
 }
 
-/* Projects */
+.card p{
+color:#cbd5e1;
+}
+
+.tech{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.badge{
+padding:12px 20px;
+border-radius:30px;
+background:#111c35;
+border:1px solid rgba(96,165,250,.2);
+color:#cbd5e1;
+transition:.3s;
+}
+
+.badge:hover{
+background:#3b82f6;
+transform:scale(1.05);
+}
+
+.timeline{
+max-width:1000px;
+margin:auto;
+border-left:3px solid #3b82f6;
+padding-left:35px;
+}
+
+.item{
+margin-bottom:50px;
+position:relative;
+}
+
+.item:before{
+content:'';
+position:absolute;
+left:-46px;
+top:5px;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#3b82f6;
+}
+
+.item h2{
+color:#60a5fa;
+margin-bottom:5px;
+}
+
+.item h4{
+color:#94a3b8;
+margin-bottom:15px;
+}
 
 .projects{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
 }
 
 .project{
-background:#1e293b;
+background:#111c35;
 padding:30px;
-border-radius:15px;
+border-radius:18px;
 transition:.3s;
 }
 
 .project:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .project h2{
@@ -308,63 +251,59 @@ margin-bottom:15px;
 color:#60a5fa;
 }
 
-.tags{
-margin-top:20px;
+.project p{
+line-height:1.8;
+color:#cbd5e1;
 }
 
-.tags span{
-display:inline-block;
-padding:8px 14px;
-background:#334155;
-border-radius:20px;
-margin:5px;
-font-size:13px;
+.terminal{
+background:#000;
+border-radius:15px;
+padding:30px;
+font-family:monospace;
+font-size:18px;
+line-height:2;
+color:#4ade80;
+max-width:900px;
+margin:auto;
+border:1px solid #1f2937;
 }
-
-/* Contact */
 
 .contact{
 text-align:center;
 }
 
-.contact p{
-font-size:18px;
-margin:15px 0;
-color:#cbd5e1;
+.contact a{
+display:inline-block;
+margin:15px;
+padding:14px 30px;
+border-radius:10px;
+text-decoration:none;
+background:#3b82f6;
+color:white;
+transition:.3s;
 }
 
-/* Footer */
+.contact a:hover{
+transform:translateY(-4px);
+}
 
 footer{
-padding:25px;
+margin-top:80px;
+padding:35px;
 text-align:center;
-background:#020617;
+background:#01040f;
 color:#94a3b8;
-margin-top:50px;
 }
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-.hero{
-flex-direction:column-reverse;
-text-align:center;
+.hero h1{
+font-size:48px;
 }
 
-.hero-left,.hero-right{
-width:100%;
-}
-
-.hero-left h1{
-font-size:42px;
-}
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-.skills-grid,
-.projects{
-grid-template-columns:1fr;
+.hero h2{
+font-size:24px;
 }
 
 nav ul{
@@ -381,7 +320,9 @@ display:none;
 
 <nav>
 
-<div class="logo">PAVANI AI</div>
+<div class="logo">
+AI.PORTFOLIO
+</div>
 
 <ul>
 <li><a href="#about">About</a></li>
@@ -393,257 +334,234 @@ display:none;
 
 </nav>
 
-<div class="hero" id="about">
+<section class="hero" id="about">
 
-<div class="hero-left">
+<div>
 
-<h3>👋 Hello, I'm</h3>
+<h3>GENERATIVE AI ENGINEER</h3>
 
 <h1>
-<span>Kunche Reddy Pavani</span>
+KUNCHE REDDY
+<br>
+<span>PAVANI</span>
 </h1>
 
+<h2>
+Building Enterprise AI Systems with LLMs, RAG & Intelligent Automation
+</h2>
+
 <p>
-Generative AI Engineer with 9+ years of experience designing enterprise AI solutions using Large Language Models, Retrieval-Augmented Generation (RAG), Machine Learning, NLP, Vector Databases, Cloud Platforms, and MLOps technologies.
+
+Generative AI Engineer with 9+ years of experience delivering enterprise-grade AI solutions powered by Large Language Models, Retrieval-Augmented Generation (RAG), Machine Learning, NLP, Vector Databases, and Cloud Native Architectures.
+
+Specialized in AI Copilots, Enterprise Knowledge Assistants, Semantic Search Platforms, Intelligent Document Processing, and AI-driven Automation.
+
 </p>
 
-<a href="resume.pdf" class="btn primary" target="_blank">
-Download Resume
-</a>
-
-<a href="https://github.com/pavabikunche24" class="btn secondary">
-GitHub
-</a>
-
 </div>
 
-<div class="hero-right">
+</section>
 
-<div class="profile">
-<img src="profile.jpg" alt="Profile Photo">
-</div>
+<section class="section">
 
-</div>
-
-</div>
+<h1 class="title">
+AI <span>Dashboard</span>
+</h1>
 
 <div class="stats">
 
 <div class="card">
-<h2>9+</h2>
+<h1>9+</h1>
 <p>Years Experience</p>
 </div>
 
 <div class="card">
-<h2>5</h2>
+<h1>5</h1>
 <p>Enterprise Clients</p>
 </div>
 
 <div class="card">
-<h2>25+</h2>
-<p>AI Solutions</p>
+<h1>25+</h1>
+<p>AI Solutions Delivered</p>
 </div>
 
 <div class="card">
-<h2>15+</h2>
+<h1>20+</h1>
 <p>Core Technologies</p>
 </div>
 
 </div>
 
-<section id="skills">
+</section>
+
+<section class="section" id="skills">
 
 <h1 class="title">
-Technical <span>Skills</span>
+Technology <span>Stack</span>
 </h1>
 
-<div class="skills-grid">
+<div class="tech">
 
-<div>
-
-<div class="skill">
-<div class="skill-name">Generative AI & LLMs</div>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">LangChain / LlamaIndex</div>
-<div class="bar"><div class="fill" style="width:92%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Python</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">RAG & Vector Databases</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-</div>
-
-<div>
-
-<div class="skill">
-<div class="skill-name">Machine Learning</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">AWS / Azure / GCP</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Docker & Kubernetes</div>
-<div class="bar"><div class="fill" style="width:82%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">MLOps & CI/CD</div>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-</div>
-
-</div>
+<div class="badge">Python</div>
+<div class="badge">OpenAI</div>
+<div class="badge">GPT</div>
+<div class="badge">Gemini</div>
+<div class="badge">Claude</div>
+<div class="badge">LangChain</div>
+<div class="badge">LlamaIndex</div>
+<div class="badge">RAG</div>
+<div class="badge">Prompt Engineering</div>
+<div class="badge">Pinecone</div>
+<div class="badge">FAISS</div>
+<div class="badge">ChromaDB</div>
+<div class="badge">TensorFlow</div>
+<div class="badge">PyTorch</div>
+<div class="badge">Docker</div>
+<div class="badge">Kubernetes</div>
+<div class="badge">AWS</div>
+<div class="badge">Azure</div>
+<div class="badge">GCP</div>
+<div class="badge">MLOps</div>
+<div class="badge">FastAPI</div>
+<div class="badge">NLP</div>
 
 </div>
 
 </section>
 
-<section id="experience">
+<section class="section" id="experience">
 
 <h1 class="title">
-Career <span>Journey</span>
+Career <span>Timeline</span>
 </h1>
 
 <div class="timeline">
 
-<div class="job">
+<div class="item">
 <h2>Gen AI Engineer</h2>
 <h4>AmerisourceBergen | Mar 2025 - Present</h4>
-<p>Enterprise AI applications, RAG architecture, AI Copilots, Knowledge Assistants, LangChain, OpenAI, Pinecone and Kubernetes deployments.</p>
+<p>Enterprise AI applications, AI Copilots, RAG systems, vector search platforms and intelligent automation solutions.</p>
 </div>
 
-<div class="job">
+<div class="item">
 <h2>AI / ML - Gen AI Engineer</h2>
 <h4>Ford | Apr 2023 - Feb 2025</h4>
-<p>Built enterprise AI solutions, semantic search systems, intelligent chatbots and scalable ML pipelines.</p>
+<p>Built scalable AI systems, semantic search engines and enterprise machine learning platforms.</p>
 </div>
 
-<div class="job">
+<div class="item">
 <h2>AI / ML Engineer</h2>
 <h4>Broadridge Financial | Jan 2021 - Mar 2023</h4>
-<p>Developed predictive analytics, NLP applications and deep learning models for enterprise automation.</p>
+<p>Developed NLP solutions, predictive analytics and enterprise AI pipelines.</p>
 </div>
 
-<div class="job">
+<div class="item">
 <h2>ML Engineer - Data Science</h2>
 <h4>American Airlines | Oct 2018 - Dec 2020</h4>
-<p>Machine learning pipelines, forecasting systems, customer analytics and BI dashboards.</p>
+<p>Built recommendation engines, forecasting systems and business intelligence solutions.</p>
 </div>
 
-<div class="job">
+<div class="item">
 <h2>Data Science Engineer</h2>
 <h4>Info Logitech Systems | Aug 2016 - Jun 2018</h4>
-<p>Built predictive models, ETL pipelines and analytical dashboards using Python and SQL.</p>
+<p>Designed machine learning models, ETL pipelines and interactive analytics dashboards.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="projects">
+<section class="section" id="projects">
 
 <h1 class="title">
-Featured <span>Projects</span>
+Featured <span>AI Solutions</span>
 </h1>
 
 <div class="projects">
 
 <div class="project">
-<h2>🧠 Enterprise RAG Platform</h2>
-<p>Built intelligent enterprise knowledge assistant using OpenAI, LangChain, Pinecone and FastAPI.</p>
-
-<div class="tags">
-<span>OpenAI</span>
-<span>LangChain</span>
-<span>RAG</span>
-<span>Pinecone</span>
-</div>
-
+<h2>🧠 Enterprise Knowledge Assistant</h2>
+<p>Built enterprise RAG applications using OpenAI, LangChain, Vector Databases and FastAPI for intelligent knowledge retrieval.</p>
 </div>
 
 <div class="project">
-<h2>🤖 AI Copilot</h2>
-<p>Developed AI Copilot for enterprise workflow automation with semantic search and vector retrieval.</p>
-
-<div class="tags">
-<span>Azure OpenAI</span>
-<span>LlamaIndex</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-</div>
-
+<h2>🤖 AI Copilot Platform</h2>
+<p>Designed AI copilots for enterprise workflow automation with contextual reasoning and semantic search.</p>
 </div>
 
 <div class="project">
 <h2>📄 Intelligent Document Processing</h2>
-<p>OCR, NLP and transformer-based extraction engine for enterprise document automation.</p>
-
-<div class="tags">
-<span>OCR</span>
-<span>NLP</span>
-<span>Transformers</span>
-<span>Python</span>
-</div>
-
+<p>Developed OCR and NLP powered document intelligence systems for enterprise automation.</p>
 </div>
 
 <div class="project">
 <h2>📊 Predictive Analytics Dashboard</h2>
-<p>Business intelligence and forecasting platform using ML models and interactive dashboards.</p>
-
-<div class="tags">
-<span>TensorFlow</span>
-<span>Power BI</span>
-<span>Scikit-Learn</span>
-<span>AWS</span>
-</div>
-
+<p>Delivered machine learning and deep learning solutions for forecasting, business intelligence and analytics.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="contact">
+<section class="section">
+
+<h1 class="title">
+AI <span>Console</span>
+</h1>
+
+<div class="terminal">
+
+C:\Users\Pavani> whoami<br>
+
+Kunche Reddy Pavani<br><br>
+
+Role : Generative AI Engineer<br>
+
+Experience : 9+ Years<br>
+
+Core Skills :<br>
+
+✓ Large Language Models<br>
+✓ Retrieval-Augmented Generation<br>
+✓ AI Automation<br>
+✓ Machine Learning<br>
+✓ Cloud Native AI<br>
+✓ Vector Databases<br>
+✓ MLOps<br><br>
+
+Status : Ready for next innovation...
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
 
 <h1 class="title">
 Let's <span>Connect</span>
 </h1>
 
-<div class="contact">
+<a href="https://github.com/Pavanikunche24">
+GitHub
+</a>
 
-<p>📧 pavani.kunche20@gmail.com</p>
-
-<p>📱 +1 (561) 509-1224</p>
-
-<p>💻 GitHub : github.com/pavabikunche24</p>
-
-<p>
-Always interested in discussing Generative AI,
-Enterprise Automation, LLM Applications,
-Cloud Native AI and Digital Transformation.
-</p>
-
-</div>
+<a href="#">
+LinkedIn
+</a>
 
 </section>
 
 <footer>
 
-© 2026 Kunche Reddy Pavani | Generative AI Engineer
+Building Intelligent Systems for Enterprise Innovation
+
+<br><br>
+
+Generative AI • LLMs • Machine Learning • Cloud AI • Intelligent Automation
+
+<br><br>
+
+© 2026 Kunche Reddy Pavani
 
 </footer>
 
